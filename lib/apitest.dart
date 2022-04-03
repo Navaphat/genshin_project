@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:genshin_project/model/CharacterApiResult.dart';
 import 'package:genshin_project/model/WeaponApiResult.dart';
-import 'package:genshin_project/page/characterData.dart';
-import 'package:genshin_project/page/weaponData.dart';
+import 'package:genshin_project/data/characterData.dart';
+import 'package:genshin_project/data/weaponData.dart';
 import 'package:http/http.dart' as http;
 
 class apiTest extends StatefulWidget {
