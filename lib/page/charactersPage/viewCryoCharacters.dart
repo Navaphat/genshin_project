@@ -19,7 +19,7 @@ Widget viewCryoCharacter({required int index}) {
                     ],
                   ),
                   SizedBox(width: 8.0,),
-                  Text('${charData[i].name}', style: TextStyle(fontSize: 25.0, color: Colors.red),
+                  Text('${charData[i].name}', style: TextStyle(fontSize: 25.0, color: Colors.cyanAccent),
                   ),
                 ],
               ),

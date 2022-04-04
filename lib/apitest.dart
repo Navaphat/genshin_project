@@ -135,12 +135,54 @@ class _apiTestState extends State<apiTest> with TickerProviderStateMixin {
             labelColor: Colors.blue,
             tabs: [
               Tab(text: 'All',),
-              Tab(text: 'Pyro',),
-              Tab(text: 'Cryo',),
-              Tab(text: 'Hydro',),
-              Tab(text: 'Anemo',),
-              Tab(text: 'Electro',),
-              Tab(text: 'Geo',),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/visions/pyro.png', width: 30.0,),
+                  Text('Pyro', style: TextStyle(color: Colors.red),),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/visions/cryo.png', width: 30.0,),
+                  Text('Cryo', style: TextStyle(color: Colors.cyanAccent),),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/visions/hydro.png', width: 30.0,),
+                  Text('Hydro', style: TextStyle(color: Colors.indigo),),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/visions/anemo.png', width: 30.0,),
+                  Text('Anemo', style: TextStyle(color: Colors.greenAccent),),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/visions/electro.png', width: 30.0,),
+                  Text('Electro', style: TextStyle(color: Colors.purple),),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/visions/geo.png', width: 30.0,),
+                  Text('Geo', style: TextStyle(color: Colors.orangeAccent),),
+                ],
+              ),
             ],
           ),
         ),

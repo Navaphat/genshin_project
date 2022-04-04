@@ -23,7 +23,14 @@ Widget viewAllCharacter({required int index}) {
                       ],
                     ),
                     SizedBox(width: 8.0,),
-                    Flexible(child: Text('${charData[index].name}', style: TextStyle(fontSize: 25.0, color: manageVisionColors(vision: charData[index].vision)),)),
+                    Flexible(
+                        child: Column(
+                          children: [
+                            Text('${charData[index].name}', style: TextStyle(fontSize: 25.0, color: manageVisionColors(vision: charData[index].vision)),),
+                            Image.asset('assets/images/raritys/${(charData[index].rarity == 5)? '5-stars' : '4-stars'}.webp', width: 100.0,),
+                          ],
+                        ),
+                    ),
                   ],
                 ),
               ),
