@@ -30,6 +30,7 @@ class apiTest extends StatefulWidget {
 class _apiTestState extends State<apiTest> with TickerProviderStateMixin {
 
   var _isLoading = false;
+  late TabController _mainTabController;
   late TabController _tabControllerCharacters;
   late TabController _tabControllerWeapons;
 
@@ -39,8 +40,10 @@ class _apiTestState extends State<apiTest> with TickerProviderStateMixin {
     super.initState();
     _tabControllerCharacters = TabController(length: 7, vsync: this);
     _tabControllerWeapons = TabController(length: 6, vsync: this);
+    _mainTabController = TabController(length: 3, vsync: this);
     _apiConnected();
   }
+
   _apiConnected() async {
     setState(() {
       _isLoading = true;
@@ -65,42 +68,59 @@ class _apiTestState extends State<apiTest> with TickerProviderStateMixin {
 
     print(respondWeapons.body);
   }
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Genshin Impact'),
-          bottom: const TabBar(
-              tabs: [
-                Tab(text: 'Characters',),
-                Tab(text: 'Weapons',),
-                Tab(text: 'Artifacts',),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Genshin Impact'),
+        ),
+      body: Stack(
+        children: [
+          if (_isLoading)
+            const Center(
+              child: SizedBox(
+                width: 40.0,
+                height: 40.0,
+                child: CircularProgressIndicator(),
+              ),
+            )
+          else
+            _mainTabBar(),
+        ],
+      ),
+    );
+  }
+
+  Widget _mainTabBar() {
+    return Column(
+      children: [
+        Container(
+          color: Colors.white,
+          child: TabBar(
+            labelColor: Colors.blue,
+            controller: _mainTabController,
+            tabs: [
+              Tab(text: 'Characters',),
+              Tab(text: 'Weapons',),
+              Tab(text: 'Artifacts',),
+            ],
+          ),
+        ),
+
+        Flexible(
+          child: Container(
+            child: TabBarView(
+              controller: _mainTabController,
+              children: [
+                _subTabBarCharacters(),
+                _subTabBarWeapons(),
+                Center(child: Text('Comming Soon', style: TextStyle(fontSize: 100.0),)),
               ],
             ),
           ),
-        body: Stack(
-          children: [
-            if (_isLoading)
-              const Center(
-                child: SizedBox(
-                  width: 40.0,
-                  height: 40.0,
-                  child: CircularProgressIndicator(),
-                ),
-              )
-            else
-              TabBarView(
-                  children: [
-                    _subTabBarCharacters(),
-                    _subTabBarWeapons(),
-                    Center(child: Text('Comming Soon', style: TextStyle(fontSize: 100.0),)),
-                  ]
-              ),
-          ],
         ),
-      ),
+      ],
     );
   }
 
