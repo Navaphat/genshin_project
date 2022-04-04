@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
 import 'package:genshin_project/page/charactersPage/charactersCheckVision.dart';
+import 'package:genshin_project/page/charactersPage/manageVisionColors.dart';
 
 Widget viewAllCharacter({required int index}) {
   var charData = CharacterData.data;
@@ -22,7 +23,7 @@ Widget viewAllCharacter({required int index}) {
                       ],
                     ),
                     SizedBox(width: 8.0,),
-                    Text('${charData[index].name}', style: TextStyle(fontSize: 25.0, color: Colors.red),),
+                    Flexible(child: Text('${charData[index].name}', style: TextStyle(fontSize: 25.0, color: manageVisionColors(vision: charData[index].vision)),)),
                   ],
                 ),
               ),
