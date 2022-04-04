@@ -14,14 +14,16 @@ class apiTest extends StatefulWidget {
   State<apiTest> createState() => _apiTestState();
 }
 
-class _apiTestState extends State<apiTest> {
+class _apiTestState extends State<apiTest> with TickerProviderStateMixin {
 
   var _isLoading = false;
+  late TabController controller;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    controller = TabController(length: 3, vsync: this);
     _apiConnected();
   }
   _apiConnected() async {
@@ -52,34 +54,41 @@ class _apiTestState extends State<apiTest> {
   @override
   Widget build(BuildContext context) {
     var charData = CharacterData.data;
+    var weaData = WeaponData.data;
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Stack(
-          children: [
-            if (_isLoading)
-              const Center(
-                child: SizedBox(
-                  width: 40.0,
-                  height: 40.0,
-                  child: CircularProgressIndicator(),
-                ),
-              )
-            else
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _viewCharacterViewTen(),
-                    ],
-                  ),
-
-                  _viewWeaponViewTen(),
-                ],
-              ),
+      appBar: AppBar(
+        title: Text('Genshin Impact'),
+        bottom: TabBar(
+          controller: controller,
+          tabs: [
+            Tab(text: 'Characters',),
+            Tab(text: 'Weapons',),
+            Tab(text:'Artifacts',)
           ],
         ),
+      ),
+      body: Stack(
+        children: [
+          if (_isLoading)
+            const Center(
+              child: SizedBox(
+                width: 40.0,
+                height: 40.0,
+                child: CircularProgressIndicator(),
+              ),
+            )
+          else
+            TabBarView(
+              children: [
+                _viewCharacterListView(index: charData.length),
+                _viewWeaponViewTen(index: weaData.length),
+                Center(
+                  child: Text('For Artifacts', style: TextStyle(fontSize: 50.0),),
+                )
+              ],
+              controller: controller,
+            )
+        ],
       ),
     );
   }
@@ -87,318 +96,39 @@ class _apiTestState extends State<apiTest> {
   Widget _viewCharacterListView({required int index}) {
     var charData = CharacterData.data;
     return Flexible(
-      child: ListView.builder(
-          padding: EdgeInsets.all(20.0),
-          itemCount: index,
-          itemBuilder: (context, index) {
-            return Row(
-              children: [
-                Card(
-                  child: InkWell(
-                    onTap: () {},
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/characters/${charData[index].slug}.webp',),
-                        SizedBox(width: 8.0,),
-                        Text('${charData[index].name}', style: TextStyle(fontSize: 50.0, color: Colors.red),),
-                      ],
-                    ),
+      child: Container(
+        child: ListView.builder(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            itemCount: index,
+            itemBuilder: (context, index) {
+              return Card(
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Stack(
+                        children: [
+                          Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0, color: (charData[index].rarity == 5)? Colors.orange : Colors.purpleAccent,),
+                          Image.asset('assets/images/characters/${charData[index].slug}.webp', width: 100.0,),
+                        ],
+                      ),
+                      SizedBox(width: 8.0,),
+                      Text('${charData[index].name}', style: TextStyle(fontSize: 25.0, color: Colors.red),),
+                    ],
                   ),
                 ),
-              ],
-            );
-          }
+              );
+            }
+        ),
       ),
     );
   }
 
-  Widget _viewCharacterGridView({required int index}) {
-    var charData = CharacterData.data;
-    return Flexible(
-      child: GridView.builder(
-          padding: EdgeInsets.all(20.0),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-          ),
-          itemCount: charData.length,
-          itemBuilder: (context, index) {
-            return Card(
-              child: InkWell(
-                onTap: () {},
-                child: Column(
-                  children: [
-                    Image.asset('assets/images/characters/${charData[index].slug}.webp', width: 150.0,),
-                    Text('${charData[index].name}', style: TextStyle(fontSize: 50.0, color: Colors.red),),
-                  ],
-                ),
-              ),
-            );
-          }
-      ),
-    );
-  }
-
-  Widget _viewCharacterViewTen() {
-    var charData = CharacterData.data;
-    return Column(
-      children: [
-        Wrap(
-          children: [
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[0].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[0].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[1].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[1].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[2].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[2].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[3].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[3].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[4].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[4].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-
-        Wrap(
-          children: [
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[5].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[5].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[6].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[6].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[7].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[7].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[8].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[8].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  Card(
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0,),
-                              Image.asset('assets/images/characters/${charData[9].slug}.webp', width: 100.0,)
-                            ],
-                          ),
-                          SizedBox(width: 8.0,),
-                          Text('${charData[9].name}', style: TextStyle(fontSize: 20.0),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget _viewWeaponViewTen() {
+  Widget _viewWeaponViewTen({required int index}) {
     var weaData = WeaponData.data;
     return Flexible(
       child: ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 100.0),
-        itemCount: 5,
+        itemCount: index,
           itemBuilder: (context, index) {
             return Card(
               child: InkWell(
@@ -421,5 +151,22 @@ class _apiTestState extends State<apiTest> {
       ),
     );
   }
+
+/*  _view() {
+    Stack(
+      children: [
+        if (_isLoading)
+          const Center(
+            child: SizedBox(
+              width: 40.0,
+              height: 40.0,
+              child: CircularProgressIndicator(),
+            ),
+          )
+        else
+          _viewCharacterListView(index: charData.length),
+      ],
+    );
+  }*/
 
 }
