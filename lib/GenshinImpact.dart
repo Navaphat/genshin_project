@@ -33,11 +33,13 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
   late TabController _mainTabController;
   late TabController _tabControllerCharacters;
   late TabController _tabControllerWeapons;
+  late TabController _tabControllerCity;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    _tabControllerCity = TabController(length: 1, vsync: this);
     _tabControllerCharacters = TabController(length: 7, vsync: this);
     _tabControllerWeapons = TabController(length: 6, vsync: this);
     _mainTabController = TabController(length: 3, vsync: this);
@@ -66,7 +68,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
       WeaponData.data = weaData;
     });
 
-    print(respondWeapons.body);
+    print(respondCharacters.body);
   }
 
   @override

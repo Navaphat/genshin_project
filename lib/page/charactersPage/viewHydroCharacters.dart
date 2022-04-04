@@ -19,7 +19,11 @@ Widget viewHydroCharacter({required int index}) {
                     ],
                   ),
                   SizedBox(width: 8.0,),
-                  Text('${charData[i].name}', style: TextStyle(fontSize: 25.0, color: Colors.indigo),
+                  Column(
+                    children: [
+                      Text('${charData[i].name}', style: TextStyle(fontSize: 25.0, color: Colors.indigo),),
+                      Image.asset('assets/images/raritys/${(charData[i].rarity == 5)? '5-stars' : '4-stars'}.webp', width: 100.0,),
+                    ],
                   ),
                 ],
               ),
