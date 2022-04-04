@@ -20,14 +20,14 @@ import 'package:genshin_project/page/weaponsPage/viewPolearmWeapons.dart';
 import 'package:genshin_project/page/weaponsPage/viewSwordWeapons.dart';
 import 'package:http/http.dart' as http;
 
-class apiTest extends StatefulWidget {
-  const apiTest({Key? key}) : super(key: key);
+class GenshinImpact extends StatefulWidget {
+  const GenshinImpact({Key? key}) : super(key: key);
 
   @override
-  State<apiTest> createState() => _apiTestState();
+  State<GenshinImpact> createState() => _GenshinImpactState();
 }
 
-class _apiTestState extends State<apiTest> with TickerProviderStateMixin {
+class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateMixin {
 
   var _isLoading = false;
   late TabController _mainTabController;
