@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
 import 'package:genshin_project/page/charactersPage/charactersCheckVision.dart';
