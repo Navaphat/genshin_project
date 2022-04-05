@@ -194,11 +194,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
             child: TabBarView(
               controller: _tabControllerCharacters,
               children: [
-                Column(
-                  children: [
-                    viewAllCharacter(index: charDataLength),
-                  ],
-                ),
+                viewAllCharacter(index: charDataLength),
                 SingleChildScrollView(child: viewPyroCharacter(index: charDataLength)),
                 SingleChildScrollView(child: viewCryoCharacter(index: charDataLength)),
                 SingleChildScrollView(child: viewHydroCharacter(index: charDataLength)),

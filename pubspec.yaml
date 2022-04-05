@@ -63,6 +63,8 @@ flutter:
     - assets/images/characters/
     - assets/images/visions/
     - assets/images/icons/weapons/
+    - assets/images/characters/full-art-pyro/
+    - assets/images/characters/pyro-con/
     - assets/images/raritys/
     - assets/images/weapons/
     - assets/images/weapons/sword/

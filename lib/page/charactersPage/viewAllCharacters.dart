@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
+import 'package:genshin_project/page/characterInfoPage.dart';
 import 'package:genshin_project/page/charactersPage/charactersCheckVision.dart';
 import 'package:genshin_project/page/charactersPage/manageVisionColors.dart';
 
@@ -15,6 +16,7 @@ Widget viewAllCharacter({required int index}) {
           return Card(
             child: InkWell(
               onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => characterInfoPage(index: index)));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
