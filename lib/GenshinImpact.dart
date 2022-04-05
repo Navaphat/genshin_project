@@ -56,19 +56,19 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
     final Uri urlWeapons = Uri.parse('https://genshinlist.com/api/weapons');
     var respondWeapons = await http.get(urlWeapons);
 
-
     setState(() {
       _isLoading = false;
     });
     //var json = jsonDecode(respondCharacters.body);
     var charData = apiResultFromJson(respondCharacters.body);
     var weaData = weaponApiResultFromJson(respondWeapons.body);
+
     setState(() {
       CharacterData.data = charData;
       WeaponData.data = weaData;
     });
 
-    print(respondCharacters.body);
+    print('Successful');
   }
 
   @override
