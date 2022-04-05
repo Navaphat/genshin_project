@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
 import 'package:genshin_project/page/weaponsPage/weaponsCheckRarity.dart';
 
-Widget viewClaymoreWeapons({required int index}) {
+import '../weaponInfoPage.dart';
+
+Widget viewClaymoreWeapons({required int index, required var context}) {
   var weaData = WeaponData.data;
   return Column(
     children: [
@@ -10,7 +12,9 @@ Widget viewClaymoreWeapons({required int index}) {
         if(weaData[i].type.toString() == 'Type.CLAYMORE')
           Card(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: i)));
+              },
               child: Row(
                 children: [
                   Stack(

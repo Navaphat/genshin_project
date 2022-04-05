@@ -265,9 +265,9 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
               controller: _tabControllerWeapons,
               children: [
                 viewAllWeapon(index: weaDataLength),
-                SingleChildScrollView(child: viewSwordWeapons(index: weaDataLength)),
-                SingleChildScrollView(child: viewBowWeapons(index: weaDataLength)),
-                SingleChildScrollView(child: viewClaymoreWeapons(index: weaDataLength),),
+                SingleChildScrollView(child: viewSwordWeapons(index: weaDataLength, context: context)),
+                SingleChildScrollView(child: viewBowWeapons(index: weaDataLength, context: context)),
+                SingleChildScrollView(child: viewClaymoreWeapons(index: weaDataLength, context: context),),
                 SingleChildScrollView(child: viewPolearmWeapons(index: weaDataLength),),
                 SingleChildScrollView(child: viewCatalystWeapons(index: weaDataLength),),
               ],

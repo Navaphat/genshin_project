@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
 import 'package:genshin_project/page/weaponsPage/weaponsCheckRarity.dart';
 
-Widget viewSwordWeapons({required int index}) {
+import '../weaponInfoPage.dart';
+
+Widget viewSwordWeapons({required int index, required var context}) {
   var weaData = WeaponData.data;
   weaData.sort((a,b) => b.rarity.compareTo(a.rarity));
   return Column(
@@ -11,7 +13,9 @@ Widget viewSwordWeapons({required int index}) {
         if(weaData[i].type.toString() == 'Type.SWORD')
           Card(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: i)));
+              },
               child: Row(
                 children: [
                   Stack(

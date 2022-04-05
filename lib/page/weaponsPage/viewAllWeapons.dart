@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
+import 'package:genshin_project/page/weaponInfoPage.dart';
 import 'package:genshin_project/page/weaponsPage/weaponsCheckRarity.dart';
 import 'package:genshin_project/page/weaponsPage/weaponsCheckType.dart';
 
@@ -10,7 +11,9 @@ Widget viewAllWeapon({required int index}) {
       itemBuilder: (context, index) {
         return Card(
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: index)));
+            },
             child: Row(
               children: [
                 Stack(
