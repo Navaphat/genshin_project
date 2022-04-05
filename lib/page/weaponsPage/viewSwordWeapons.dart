@@ -4,6 +4,7 @@ import 'package:genshin_project/page/weaponsPage/weaponsCheckRarity.dart';
 
 Widget viewSwordWeapons({required int index}) {
   var weaData = WeaponData.data;
+  weaData.sort((a,b) => b.rarity.compareTo(a.rarity));
   return Column(
     children: [
       for(int i = 0; i < index; i++)
