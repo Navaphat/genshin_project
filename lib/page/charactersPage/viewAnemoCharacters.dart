@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
 
-Widget viewAnemoCharacter({required int index}) {
+import '../characterInfoPage.dart';
+
+Widget viewAnemoCharacter({required int index, required var context}) {
   var charData = CharacterData.data;
   return Column(
     children: [
@@ -9,7 +11,9 @@ Widget viewAnemoCharacter({required int index}) {
         if (charData[i].vision == 'anemo')
           Card(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => characterInfoPage(index: i)));
+              },
               child: Row(
                 children: [
                   Stack(

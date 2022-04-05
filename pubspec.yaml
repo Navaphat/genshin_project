@@ -65,6 +65,16 @@ flutter:
     - assets/images/icons/weapons/
     - assets/images/characters/full-art-pyro/
     - assets/images/characters/pyro-con/
+    - assets/images/characters/full-art-cryo/
+    - assets/images/characters/cryo-con/
+    - assets/images/characters/full-art-hydro/
+    - assets/images/characters/hydro-con/
+    - assets/images/characters/full-art-anemo/
+    - assets/images/characters/anemo-con/
+    - assets/images/characters/full-art-electro/
+    - assets/images/characters/electro-con/
+    - assets/images/characters/full-art-geo/
+    - assets/images/characters/geo-con/
     - assets/images/raritys/
     - assets/images/weapons/
     - assets/images/weapons/sword/

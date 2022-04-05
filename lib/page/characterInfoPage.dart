@@ -37,28 +37,22 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                   ),
 
                   Container(
-                    height: 350.0,
+                    height: 400.0,
                     child: TabBarView(
                       children: [
                         Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/images/characters/full-art-${charactersCheckVision(vision: charData.vision)}/${charData.slug}.webp',
-                              fit: BoxFit.cover,
-                              height: 350.0,
-                            ),
+                          child: Image.asset(
+                            'assets/images/characters/full-art-${charactersCheckVision(vision: charData.vision)}/${charData.slug}.webp',
+                            fit: BoxFit.cover,
+                            height: 420.0,
                           ),
                         ),
 
                         Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/images/characters/${charactersCheckVision(vision: charData.vision)}-con/${charData.slug}.webp',
-                              fit: BoxFit.cover,
-                              height: 350.0,
-                            ),
+                          child: Image.asset(
+                            'assets/images/characters/${charactersCheckVision(vision: charData.vision)}-con/${charData.slug}.webp',
+                            fit: BoxFit.cover,
+                            height: 350.0,
                           ),
                         ),
                       ],

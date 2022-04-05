@@ -1,7 +1,10 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
+import 'package:genshin_project/page/characterInfoPage.dart';
 
-Widget viewPyroCharacter({required int index}) {
+Widget viewPyroCharacter({required int index, required var context}) {
   var charData = CharacterData.data;
   return Column(
     children: [
@@ -9,7 +12,9 @@ Widget viewPyroCharacter({required int index}) {
         if (charData[i].vision == 'pyro')
           Card(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => characterInfoPage(index: i)));
+              },
               child: Row(
                 children: [
                   Stack(
