@@ -30,7 +30,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
                 child: Column(
                   children: [
                     Container(
-                      color: Colors.white,
+                      color:  Colors.white,
                       child: TabBar(
                         labelColor: Colors.blue,
                         tabs: [
