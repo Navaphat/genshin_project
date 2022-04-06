@@ -56836,10 +56836,10 @@ l.toString
 l=E.eW(S.z_(l,q,"cryo"),e,C.U,e,e,C.l)
 k=f.c
 k.toString
-k=E.eW(S.z_(k,q,"anemo"),e,C.U,e,e,C.l)
+k=E.eW(S.z_(k,q,"hydro"),e,C.U,e,e,C.l)
 j=f.c
 j.toString
-j=E.eW(S.z_(j,q,"hydro"),e,C.U,e,e,C.l)
+j=E.eW(S.z_(j,q,"anemo"),e,C.U,e,e,C.l)
 i=f.c
 i.toString
 i=E.eW(S.z_(i,q,"electro"),e,C.U,e,e,C.l)
