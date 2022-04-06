@@ -68,7 +68,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                             children: [
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('Rarity')),
+                                child: Center(child: Text('Rarity', style: TextStyle(fontSize: 18.0),)),
                               )),
                               Card(child: Image.asset('assets/images/raritys/${(charData.rarity == 5)? '5-stars' : '4-stars'}.webp',height: 32.0,)),
                             ],
@@ -78,11 +78,11 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                             children: [
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('Weapon Type')),
+                                child: Center(child: Text('Weapon Type', style: TextStyle(fontSize: 18.0),),),
                               )),
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('${charData.weapon.toString().substring(7).toUpperCase()}')),
+                                child: Center(child: Text('${charData.weapon.toString().substring(7).toUpperCase()}', style: TextStyle(fontSize: 18.0),)),
                               )),
                             ],
                           ),
@@ -91,7 +91,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                             children: [
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('Element')),
+                                child: Center(child: Text('Element', style: TextStyle(fontSize: 18.0),)),
                               )),
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -104,24 +104,11 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                             children: [
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('Gender')),
+                                child: Center(child: Text('Gender', style: TextStyle(fontSize: 18.0),)),
                               )),
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('${charData.gender.toString().substring(7)}')),
-                              )),
-                            ],
-                          ),
-
-                          TableRow(
-                            children: [
-                              Card(child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('Birthday')),
-                              )),
-                              Card(child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text(charData.birthday)),
+                                child: Center(child: Text('${charData.gender.toString().substring(7)}', style: TextStyle(fontSize: 18.0),)),
                               )),
                             ],
                           ),
@@ -130,11 +117,24 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                             children: [
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text('In-game Description')),
+                                child: Center(child: Text('Birthday', style: TextStyle(fontSize: 18.0),)),
                               )),
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Center(child: Text(charData.description)),
+                                child: Center(child: Text(charData.birthday, style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('In-game Description', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text(charData.description, style: TextStyle(fontSize: 18.0),)),
                               )),
                             ],
                           ),
