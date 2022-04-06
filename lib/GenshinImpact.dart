@@ -7,6 +7,7 @@ import 'package:genshin_project/data/characterData.dart';
 import 'package:genshin_project/data/weaponData.dart';
 import 'package:genshin_project/page/charactersPage/viewAllCharacters.dart';
 import 'package:genshin_project/page/charactersPage/viewAnemoCharacters.dart';
+import 'package:genshin_project/page/charactersPage/viewCharactersByVision.dart';
 import 'package:genshin_project/page/charactersPage/viewCryoCharacters.dart';
 import 'package:genshin_project/page/charactersPage/viewElectroCharacters.dart';
 import 'package:genshin_project/page/charactersPage/viewGeoCharacters.dart';
@@ -193,12 +194,12 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
               controller: _tabControllerCharacters,
               children: [
                 viewAllCharacter(index: charDataLength),
-                SingleChildScrollView(child: viewPyroCharacter(index: charDataLength, context: context)),
-                SingleChildScrollView(child: viewCryoCharacter(index: charDataLength, context: context)),
-                SingleChildScrollView(child: viewHydroCharacter(index: charDataLength, context: context)),
-                SingleChildScrollView(child: viewAnemoCharacter(index: charDataLength, context: context)),
-                SingleChildScrollView(child: viewElectroCharacter(index: charDataLength, context: context)),
-                SingleChildScrollView(child: viewGeoCharacter(index: charDataLength, context: context)),
+                SingleChildScrollView(child: viewCharacterByVision(index: charDataLength, context: context, vision: 'pyro'),),
+                SingleChildScrollView(child: viewCharacterByVision(index: charDataLength, context: context, vision: 'cryo'),),
+                SingleChildScrollView(child: viewCharacterByVision(index: charDataLength, context: context, vision: 'anemo'),),
+                SingleChildScrollView(child: viewCharacterByVision(index: charDataLength, context: context, vision: 'hydro'),),
+                SingleChildScrollView(child: viewCharacterByVision(index: charDataLength, context: context, vision: 'electro'),),
+                SingleChildScrollView(child: viewCharacterByVision(index: charDataLength, context: context, vision: 'geo'),),
               ],
             ),
           ),
