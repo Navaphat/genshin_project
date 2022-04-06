@@ -20,50 +20,52 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
         appBar: AppBar(
           title: Text(weaData.name),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DefaultTabController(
-              length: 2,
-              child: Column(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    child: TabBar(
-                      labelColor: Colors.blue,
-                      tabs: [
-                        Tab(text: 'Base',),
-                        Tab(text: '2nd Ascension',)
-                      ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              DefaultTabController(
+                length: 2,
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.white,
+                      child: TabBar(
+                        labelColor: Colors.blue,
+                        tabs: [
+                          Tab(text: 'Base',),
+                          Tab(text: '2nd Ascension',)
+                        ],
+                      ),
                     ),
-                  ),
 
-                  Container(
-                    height: 300.0,
-                    child: TabBarView(
-                      children: [
-                        Center(
-                          child: Image.asset(
-                            'assets/images/weapons/${weaponsCheckType(weaponType: weaData.type)}/${weaData.slug}.webp',
-                            fit: BoxFit.cover,
-                            height: 420.0,
+                    Container(
+                      height: 300.0,
+                      child: TabBarView(
+                        children: [
+                          Center(
+                            child: Image.asset(
+                              'assets/images/weapons/${weaponsCheckType(weaponType: weaData.type)}/${weaData.slug}.webp',
+                              fit: BoxFit.cover,
+                              height: 420.0,
+                            ),
                           ),
-                        ),
 
-                        Center(
-                          child: Image.asset(
-                            'assets/images/weapons/2nd-${weaponsCheckType(weaponType: weaData.type)}/${weaData.slug}.webp',
-                            fit: BoxFit.cover,
-                            height: 300.0,
+                          Center(
+                            child: Image.asset(
+                              'assets/images/weapons/2nd-${weaponsCheckType(weaponType: weaData.type)}/${weaData.slug}.webp',
+                              fit: BoxFit.cover,
+                              height: 300.0,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  )
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         )
     );
   }

@@ -18,50 +18,53 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
         appBar: AppBar(
           title: Text(charData.name),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DefaultTabController(
-              length: 2,
-              child: Column(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    child: TabBar(
-                      labelColor: Colors.blue,
-                      tabs: [
-                        Tab(text: 'Wish Art',),
-                        Tab(text: 'Constellation',)
-                      ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              DefaultTabController(
+                length: 2,
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.white,
+                      child: TabBar(
+                        labelColor: Colors.blue,
+                        tabs: [
+                          Tab(text: 'Wish Art',),
+                          Tab(text: 'Constellation',)
+                        ],
+                      ),
                     ),
-                  ),
 
-                  Container(
-                    height: 400.0,
-                    child: TabBarView(
-                      children: [
-                        Center(
-                          child: Image.asset(
-                            'assets/images/characters/full-art-${charactersCheckVision(vision: charData.vision)}/${charData.slug}.webp',
-                            fit: BoxFit.cover,
-                            height: 420.0,
+                    Container(
+                      height: 400.0,
+                      child: TabBarView(
+                        children: [
+                          Center(
+                            child: Image.asset(
+                              'assets/images/characters/full-art-${charactersCheckVision(vision: charData.vision)}/${charData.slug}.webp',
+                              fit: BoxFit.cover,
+                              height: 420.0,
+                            ),
                           ),
-                        ),
 
-                        Center(
-                          child: Image.asset(
-                            'assets/images/characters/${charactersCheckVision(vision: charData.vision)}-con/${charData.slug}.webp',
-                            fit: BoxFit.cover,
-                            height: 350.0,
+                          Center(
+                            child: Image.asset(
+                              'assets/images/characters/${charactersCheckVision(vision: charData.vision)}-con/${charData.slug}.webp',
+                              fit: BoxFit.cover,
+                              height: 350.0,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  )
-                ],
+
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         )
     );
   }
