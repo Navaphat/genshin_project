@@ -16,6 +16,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
   Widget build(BuildContext context) {
     var weaData = WeaponData.data[widget.index];
     var weaType = weaData.type.toString().substring(5);
+    var weaInfo = WeaponData.otherInfo;
     return Scaffold(
         appBar: AppBar(
           title: Text(weaData.name),
@@ -99,6 +100,71 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Center(child: Text('${weaData.atk}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Secondary Stat', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaInfo[weaData.slug]!['secondary stat']}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Secondary Stat Value', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaInfo[weaData.slug]!['secondary stat value']}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Special Ability', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaInfo[weaData.slug]!['Special Ability']}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Special Ability Description', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaInfo[weaData.slug]!['Special Ability Description']}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('In-game Description', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaInfo[weaData.slug]!['description']}', style: TextStyle(fontSize: 18.0),)),
                               )),
                             ],
                           ),
