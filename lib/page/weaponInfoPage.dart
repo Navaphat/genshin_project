@@ -61,6 +61,64 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
                         ],
                       ),
                     ),
+
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Table(
+                        columnWidths: {1: FractionColumnWidth(.7)},
+                        children: [
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Type', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('$weaType', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Rarity', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                              Card(child: Image.asset('assets/images/raritys/${(weaData.rarity == '5')? '5-stars' : '4-stars'}.webp',height: 32.0,)),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Base ATK', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaData.atk}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Obtain', style: TextStyle(fontSize: 18.0),),),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${weaData.obtain.toString().substring(7)}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

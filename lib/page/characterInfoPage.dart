@@ -13,6 +13,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
   @override
   Widget build(BuildContext context) {
     var charData = CharacterData.data[widget.index];
+    var charCon = CharacterData.constellation;
     return Scaffold(
         appBar: AppBar(
           title: Text(charData.name),
@@ -130,11 +131,37 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                             children: [
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Astrolabe Name', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${charCon[charData.slug]}', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
                                 child: Center(child: Text('In-game Description', style: TextStyle(fontSize: 18.0),)),
                               )),
                               Card(child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Center(child: Text(charData.description, style: TextStyle(fontSize: 18.0),)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Obtain', style: TextStyle(fontSize: 18.0),)),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${charData.obtain.toString().substring(7)}', style: TextStyle(fontSize: 18.0),)),
                               )),
                             ],
                           ),
