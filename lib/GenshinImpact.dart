@@ -31,7 +31,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
     super.initState();
     _tabControllerCharacters = TabController(length: 7, vsync: this);
     _tabControllerWeapons = TabController(length: 6, vsync: this);
-    _mainTabController = TabController(length: 3, vsync: this);
+    _mainTabController = TabController(length: 2, vsync: this);
     _apiConnected();
   }
 
@@ -81,7 +81,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/background/genshin-impact-bg.jpg'),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.cover,
                 ),
               ),
                 child: _mainTabBar()
@@ -102,7 +102,6 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
             tabs: [
               Tab(text: 'Characters',),
               Tab(text: 'Weapons',),
-              Tab(text: 'Artifacts',),
             ],
           ),
         ),
@@ -114,7 +113,6 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
               children: [
                 _subTabBarCharacters(),
                 _subTabBarWeapons(),
-                Center(child: Text('Comming Soon', style: TextStyle(fontSize: 100.0),)),
               ],
             ),
           ),
