@@ -6,19 +6,9 @@ import 'package:genshin_project/model/WeaponApiResult.dart';
 import 'package:genshin_project/data/characterData.dart';
 import 'package:genshin_project/data/weaponData.dart';
 import 'package:genshin_project/page/charactersPage/viewAllCharacters.dart';
-import 'package:genshin_project/page/charactersPage/viewAnemoCharacters.dart';
 import 'package:genshin_project/page/charactersPage/viewCharactersByVision.dart';
-import 'package:genshin_project/page/charactersPage/viewCryoCharacters.dart';
-import 'package:genshin_project/page/charactersPage/viewElectroCharacters.dart';
-import 'package:genshin_project/page/charactersPage/viewGeoCharacters.dart';
-import 'package:genshin_project/page/charactersPage/viewHydroCharacters.dart';
-import 'package:genshin_project/page/charactersPage/viewPyroCharacters.dart';
 import 'package:genshin_project/page/weaponsPage/viewAllWeapons.dart';
-import 'package:genshin_project/page/weaponsPage/viewBowWeapons.dart';
-import 'package:genshin_project/page/weaponsPage/viewCatalystWeapons.dart';
-import 'package:genshin_project/page/weaponsPage/viewClaymoreWeapons.dart';
-import 'package:genshin_project/page/weaponsPage/viewPolearmWeapons.dart';
-import 'package:genshin_project/page/weaponsPage/viewSwordWeapons.dart';
+import 'package:genshin_project/page/weaponsPage/viewWeaponsByType.dart';
 import 'package:http/http.dart' as http;
 
 class GenshinImpact extends StatefulWidget {
@@ -264,11 +254,11 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
               controller: _tabControllerWeapons,
               children: [
                 viewAllWeapon(index: weaDataLength),
-                SingleChildScrollView(child: viewSwordWeapons(index: weaDataLength, context: context)),
-                SingleChildScrollView(child: viewBowWeapons(index: weaDataLength, context: context)),
-                SingleChildScrollView(child: viewClaymoreWeapons(index: weaDataLength, context: context),),
-                SingleChildScrollView(child: viewPolearmWeapons(index: weaDataLength, context: context),),
-                SingleChildScrollView(child: viewCatalystWeapons(index: weaDataLength, context: context),),
+                SingleChildScrollView(child: viewWeaponsByType(index: weaDataLength, context: context, type: 'sword'),),
+                SingleChildScrollView(child: viewWeaponsByType(index: weaDataLength, context: context, type: 'bow'),),
+                SingleChildScrollView(child: viewWeaponsByType(index: weaDataLength, context: context, type: 'claymore'),),
+                SingleChildScrollView(child: viewWeaponsByType(index: weaDataLength, context: context, type: 'polearm'),),
+                SingleChildScrollView(child: viewWeaponsByType(index: weaDataLength, context: context, type: 'catalyst'),),
               ],
             ),
           ),
