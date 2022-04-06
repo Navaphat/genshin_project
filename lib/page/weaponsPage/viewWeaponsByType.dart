@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
-import 'package:genshin_project/page/weaponsPage/weaponsCheckRarity.dart';
+import 'package:genshin_project/page/weaponsPage/manageRarityColors.dart';
 
 import '../weaponInfoPage.dart';
 
