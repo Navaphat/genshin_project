@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
-import 'package:genshin_project/page/weaponsPage/weaponsCheckType.dart';
 
 class weaponInfoPage extends StatefulWidget {
 
@@ -16,6 +15,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
   @override
   Widget build(BuildContext context) {
     var weaData = WeaponData.data[widget.index];
+    var weaType = weaData.type.toString().substring(5);
     return Scaffold(
         appBar: AppBar(
           title: Text(weaData.name),
@@ -45,7 +45,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
                         children: [
                           Center(
                             child: Image.asset(
-                              'assets/images/weapons/${weaponsCheckType(weaponType: weaData.type)}/${weaData.slug}.webp',
+                              'assets/images/weapons/$weaType/${weaData.slug}.webp',
                               fit: BoxFit.cover,
                               height: 420.0,
                             ),
@@ -53,7 +53,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
 
                           Center(
                             child: Image.asset(
-                              'assets/images/weapons/2nd-${weaponsCheckType(weaponType: weaData.type)}/${weaData.slug}.webp',
+                              'assets/images/weapons/2nd-$weaType/${weaData.slug}.webp',
                               fit: BoxFit.cover,
                               height: 300.0,
                             ),

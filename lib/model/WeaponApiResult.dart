@@ -59,7 +59,7 @@ final obtainValues = EnumValues({
   "starglitter exchange": Obtain.STARGLITTER_EXCHANGE
 });
 
-enum Type { POLEARM, SWORD, BOW, CLAYMORE, CATALYST }
+enum Type { CLAYMORE, SWORD, CATALYST, BOW, POLEARM }
 
 final typeValues = EnumValues({
   "bow": Type.BOW,

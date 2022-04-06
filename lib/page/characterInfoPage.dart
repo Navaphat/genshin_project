@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
-import 'package:genshin_project/page/charactersPage/charactersCheckVision.dart';
 
 class characterInfoPage extends StatefulWidget {
   var index;
@@ -43,7 +42,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                         children: [
                           Center(
                             child: Image.asset(
-                              'assets/images/characters/full-art-${charactersCheckVision(vision: charData.vision)}/${charData.slug}.webp',
+                              'assets/images/characters/full-art-${charData.vision}/${charData.slug}.webp',
                               fit: BoxFit.cover,
                               height: 420.0,
                             ),
@@ -51,7 +50,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
 
                           Center(
                             child: Image.asset(
-                              'assets/images/characters/${charactersCheckVision(vision: charData.vision)}-con/${charData.slug}.webp',
+                              'assets/images/characters/${charData.vision}-con/${charData.slug}.webp',
                               fit: BoxFit.cover,
                               height: 350.0,
                             ),
@@ -60,6 +59,88 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                       ),
                     ),
 
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Table(
+                        columnWidths: {1: FractionColumnWidth(.7)},
+                        children: [
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Rarity')),
+                              )),
+                              Card(child: Image.asset('assets/images/raritys/${(charData.rarity == 5)? '5-stars' : '4-stars'}.webp',height: 32.0,)),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Weapon Type')),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${charData.weapon.toString().substring(7).toUpperCase()}')),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Element')),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset('assets/images/visions/${charData.vision}.png',height: 30.0,),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Gender')),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('${charData.gender.toString().substring(7)}')),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('Birthday')),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text(charData.birthday)),
+                              )),
+                            ],
+                          ),
+
+                          TableRow(
+                            children: [
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text('In-game Description')),
+                              )),
+                              Card(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text(charData.description)),
+                              )),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

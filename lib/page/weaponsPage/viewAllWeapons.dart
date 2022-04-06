@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
 import 'package:genshin_project/page/weaponInfoPage.dart';
 import 'package:genshin_project/page/weaponsPage/weaponsCheckRarity.dart';
-import 'package:genshin_project/page/weaponsPage/weaponsCheckType.dart';
 
 Widget viewAllWeapon({required int index}) {
   var weaData = WeaponData.data;
@@ -19,7 +18,7 @@ Widget viewAllWeapon({required int index}) {
                 Stack(
                   children: [
                     Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0, color: weaponsCheskRarity(rarity: weaData[index].rarity),),
-                    Image.asset('assets/images/weapons/${weaponsCheckType(weaponType: weaData[index].type)}/${weaData[index].slug}.webp', height: 100.0,)
+                    Image.asset('assets/images/weapons/${weaData[index].type.toString().substring(5)}/${weaData[index].slug}.webp', height: 100.0,)
                   ],
                 ),
                 SizedBox(width: 8.0,),
