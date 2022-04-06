@@ -134,7 +134,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                               children: [
                                 Card(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Center(child: Text('Astrolabe Name', style: TextStyle(fontSize: 18.0),)),
+                                  child: Center(child: Text('Astrolabos Name', style: TextStyle(fontSize: 18.0),)),
                                 )),
                                 Card(child: Padding(
                                   padding: const EdgeInsets.all(8.0),
