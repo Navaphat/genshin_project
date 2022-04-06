@@ -131,13 +131,13 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
             controller: _tabControllerCharacters,
             labelColor: Colors.blue,
             tabs: [
-              Flexible(child: Tab(text: 'All',)),
+              Tab(text: 'All',),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/visions/pyro.png', width: 30.0,),
-                  Flexible(child: Tab(text: 'Pyro',)),
+                  Tab(text: 'Pyro',),
                 ],
               ),
 
@@ -145,7 +145,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/visions/cryo.png', width: 30.0,),
-                  Flexible(child: Tab(text: 'Cryo',)),
+                  Tab(text: 'Cryo',),
                 ],
               ),
 
@@ -153,7 +153,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/visions/hydro.png', width: 30.0,),
-                  Flexible(child: Tab(text:'Hydro',)),
+                  Tab(text:'Hydro',),
                 ],
               ),
 
@@ -161,7 +161,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/visions/anemo.png', width: 30.0,),
-                  Flexible(child: Tab(text: 'Amemo',)),
+                  Tab(text: 'Amemo',),
                 ],
               ),
 
@@ -169,7 +169,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/visions/electro.png', width: 30.0,),
-                  Flexible(child: Tab(text: 'Electro',)),
+                  Tab(text: 'Electro',),
                 ],
               ),
 
@@ -177,7 +177,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/visions/geo.png', width: 30.0,),
-                  Flexible(child: Tab(text: 'Geo',)),
+                  Tab(text: 'Geo',),
                 ],
               ),
             ],
@@ -214,40 +214,40 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
             controller: _tabControllerWeapons,
             labelColor: Colors.blue,
             tabs: [
-              Flexible(child: Tab(text: 'All',)),
+              Tab(text: 'All',),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/icons/weapons/sword.webp', width: 30.0,),
-                  Flexible(child: Tab(text: 'Sword',)),
+                  Tab(text: 'Sword',),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/icons/weapons/bow.webp', width: 30.0,),
-                  Flexible(child: Tab(text: 'Bow',)),
+                  Tab(text: 'Bow',),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/icons/weapons/claymore.webp', width: 30.0,),
-                  Flexible(child: Tab(text: 'Claymore',)),
+                  Tab(text: 'Claymore',),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/icons/weapons/polearm.webp', width: 30.0,),
-                  Flexible(child: Tab(text: 'Polearm',)),
+                  Tab(text: 'Polearm',),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/icons/weapons/catalyst.webp', width: 30.0,),
-                  Flexible(child: Tab(text: 'Catalyst',)),
+                  Tab(text: 'Catalyst',),
                 ],
               ),
             ],
