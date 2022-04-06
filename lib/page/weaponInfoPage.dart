@@ -15,7 +15,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
   @override
   Widget build(BuildContext context) {
     var weaData = WeaponData.data[widget.index];
-    var weaType = weaData.type.toString().substring(5);
+    var weaType = weaData.type.toString().substring(5).toLowerCase();
     var weaInfo = WeaponData.otherInfo;
     return Scaffold(
         appBar: AppBar(

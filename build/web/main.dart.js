@@ -56978,7 +56978,7 @@ $S:108}
 M.kT.prototype={
 aK(){return new M.N4(C.n)}}
 M.N4.prototype={
-O(a,b){var s,r,q,p=null,o="Special Ability",n="Special Ability Description",m=$.Gh[this.a.c],l=C.c.br(J.cf(m.r),5),k=$.aq1,j=E.a7I(L.bc(m.b,p,p,p,p,p)),i=t.E,h=M.dc(p,E.FH(p,C.bm,H.a([E.d7("Base"),E.d7("2nd Ascension")],i)),C.j,p,p,p,p,p,p),g="assets/images/weapons/"+l+"/",f=m.c
+O(a,b){var s,r,q,p=null,o="Special Ability",n="Special Ability Description",m=$.Gh[this.a.c],l=C.c.br(J.cf(m.r),5).toLowerCase(),k=$.aq1,j=E.a7I(L.bc(m.b,p,p,p,p,p)),i=t.E,h=M.dc(p,E.FH(p,C.bm,H.a([E.d7("Base"),E.d7("2nd Ascension")],i)),C.j,p,p,p,p,p,p),g="assets/images/weapons/"+l+"/",f=m.c
 g=M.dc(p,E.FI(H.a([T.ba(U.bR(g+f+".webp",p,C.bO,420,p),p,p),T.ba(U.bR("assets/images/weapons/2nd-"+l+"/"+f+".webp",p,C.bO,300,p),p,p)],i),p),p,p,p,300,p,p,p)
 s=P.A([1,new S.t4(0.7)],t.S,t.PA)
 r=H.a([V.bi(new T.aO(C.v,T.ba(L.bc("Type",p,p,A.bk(p,p,p,p,p,p,p,p,p,p,p,18,p,p,p,p,!0,p,p,p,p,p,p,p,p),p,p),p,p),p),p),V.bi(new T.aO(C.v,T.ba(L.bc(l,p,p,A.bk(p,p,p,p,p,p,p,p,p,p,p,18,p,p,p,p,!0,p,p,p,p,p,p,p,p),p,p),p,p),p),p)],i)
