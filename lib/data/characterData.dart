@@ -24,7 +24,7 @@ class CharacterData {
     'keqing':'Trulla Cementarii',
     'beidou':'Victor Mare',
     'fischl':'Corvus',
-    'Lisa':'Tempus Fugit',
+    'lisa':'Tempus Fugit',
     'razor':'Lupus Minor',
     'zhongli':'???',
     'ningguang':'Opus Aequilibrium',
