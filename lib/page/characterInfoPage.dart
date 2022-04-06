@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
+import 'package:genshin_project/page/charactersPage/manageVisionColors.dart';
 
 class characterInfoPage extends StatefulWidget {
   var index;
@@ -54,6 +55,7 @@ class _characterInfoPageState extends State<characterInfoPage> with TickerProvid
                               'assets/images/characters/${charData.vision}-con/${charData.slug}.webp',
                               fit: BoxFit.cover,
                               height: 350.0,
+                              color: manageVisionColors(vision: charData.vision),
                             ),
                           ),
                         ],

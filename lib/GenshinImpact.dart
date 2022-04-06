@@ -77,7 +77,15 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
               ),
             )
           else
-            _mainTabBar(),
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/background/genshin-impact-bg.jpg'),
+                  fit: BoxFit.fitHeight,
+                ),
+              ),
+                child: _mainTabBar()
+            ),
         ],
       ),
     );

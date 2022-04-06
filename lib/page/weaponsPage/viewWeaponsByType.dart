@@ -11,6 +11,7 @@ Widget viewWeaponsByType({required int index, required var context, required var
       for(int i = 0; i < index; i++)
         if(weaData[i].type.toString().substring(5) == type.toString().toUpperCase())
           Card(
+            color: Colors.black.withOpacity(0.5),
             child: InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: i)));

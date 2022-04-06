@@ -11,6 +11,7 @@ Widget viewCharacterByVision({required int index, required var context, required
       for (int i = 0; i < index; i++)
         if (charData[i].vision == vision)
           Card(
+            color: Colors.black.withOpacity(0.5),
             child: InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => characterInfoPage(index: i)));

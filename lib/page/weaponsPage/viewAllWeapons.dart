@@ -9,6 +9,7 @@ Widget viewAllWeapon({required int index}) {
       itemCount: index,
       itemBuilder: (context, index) {
         return Card(
+          color: Colors.black.withOpacity(0.5),
           child: InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: index)));
@@ -22,7 +23,7 @@ Widget viewAllWeapon({required int index}) {
                   ],
                 ),
                 SizedBox(width: 8.0,),
-                Text('${weaData[index].name}', style: TextStyle(fontSize: 20.0),),
+                Text('${weaData[index].name}', style: TextStyle(fontSize: 20.0, color: Colors.white),),
               ],
             ),
           ),

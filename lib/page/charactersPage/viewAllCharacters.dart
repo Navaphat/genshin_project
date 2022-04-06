@@ -13,6 +13,7 @@ Widget viewAllCharacter({required int index}) {
         itemCount: index,
         itemBuilder: (context, index) {
           return Card(
+            color: Colors.black.withOpacity(0.5),
             child: InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => characterInfoPage(index: index)));
