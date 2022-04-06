@@ -13,13 +13,14 @@ Widget viewAllWeapon({required int index}) {
           child: InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: index)));
+              print('assets/images/weapons/${weaData[index].type.toString().substring(5)}/${weaData[index].slug}.webp');
             },
             child: Row(
               children: [
                 Stack(
                   children: [
                     Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0, color: weaponsCheskRarity(rarity: weaData[index].rarity),),
-                    Image.asset('assets/images/weapons/${weaData[index].type.toString().substring(5)}/${weaData[index].slug}.webp', height: 100.0,)
+                    Image.asset('assets/images/weapons/${weaData[index].type.toString().substring(5).toLowerCase()}/${weaData[index].slug}.webp', height: 100.0,)
                   ],
                 ),
                 SizedBox(width: 8.0,),

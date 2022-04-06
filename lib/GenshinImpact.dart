@@ -57,7 +57,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
       WeaponData.data = weaData;
     });
 
-    print(respondWeapons.body);
+    print(weaData[0].type);
   }
 
   @override
