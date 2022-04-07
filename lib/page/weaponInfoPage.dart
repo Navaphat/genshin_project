@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
+import 'package:genshin_project/page/weaponsPage/manageRarityStars.dart';
 
 class weaponInfoPage extends StatefulWidget {
 
@@ -87,7 +88,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Center(child: Text('Rarity', style: TextStyle(fontSize: 18.0),)),
                               )),
-                              Card(child: Image.asset('assets/images/raritys/${(weaData.rarity == '5')? '5-stars' : '4-stars'}.webp',height: 32.0,)),
+                              Card(child: Image.asset('assets/images/raritys/${manageRarityStars(rarity: weaData.rarity)}.webp',height: 32.0,)),
                             ],
                           ),
 
