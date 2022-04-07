@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "bf68a175f06815bdd62f9393ff6c8b35",
+  "assets/AssetManifest.json": "fe69a42d38faba118b0b3e7ca7e03ec8",
 "assets/assets/images/background/genshin-impact-bg.jpg": "ef05e63264be77d3e6aea9f34fb24a8c",
 "assets/assets/images/background/genshin-impact-bg2.jpg": "7f809325cd3ef264045c275c45e71405",
 "assets/assets/images/characters/anemo/jean.webp": "5087551cc944616e6c1b9041e880a6d8",
@@ -90,6 +90,9 @@ const RESOURCES = {
 "assets/assets/images/icons/weapons/claymore.webp": "718f6837536c93b544663b7cb3835a89",
 "assets/assets/images/icons/weapons/polearm.webp": "ae9bdcd48e6fef236cff1c46ed9ee246",
 "assets/assets/images/icons/weapons/sword.webp": "061a1cc7e7f14a998cf90042950ec310",
+"assets/assets/images/raritys/1-stars.webp": "b3eed862597bf2608efec4686082ab49",
+"assets/assets/images/raritys/2-stars.webp": "a900655765528c8a460474a4be66be80",
+"assets/assets/images/raritys/3-stars.webp": "bacc6ae03891a1b25bef580e5f324f12",
 "assets/assets/images/raritys/4-stars.webp": "16f6560f8eefd1bae4822bfca807c49c",
 "assets/assets/images/raritys/5-stars.webp": "3957e04cc3aa14fe4158f8f377b6760d",
 "assets/assets/images/visions/anemo.png": "68ebe8079f9582bca4c94569abec7b5f",
@@ -297,9 +300,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "ca2614b95d81b33f2932c481c420677d",
-"/": "ca2614b95d81b33f2932c481c420677d",
-"main.dart.js": "3002858a56ff56ef804c415e6b727ddb",
+"index.html": "1a6c9324dafb78d1eb05b68a0747c2c7",
+"/": "1a6c9324dafb78d1eb05b68a0747c2c7",
+"main.dart.js": "9a6f79b613db3c2532702cca0c89563c",
 "manifest.json": "d088e608a4d82e31d78f700c0628d746",
 "version.json": "36bb249bbf48d518cd389ac0ff287d35"
 };
