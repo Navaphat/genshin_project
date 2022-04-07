@@ -3,9 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "fe69a42d38faba118b0b3e7ca7e03ec8",
+  "assets/AssetManifest.json": "ee616d592aeffd69802f52ffd1fe5460",
+"assets/assets/images/background/genshin-impact-07.jpg": "909c0253eef16a7177488a61d2272784",
 "assets/assets/images/background/genshin-impact-bg.jpg": "ef05e63264be77d3e6aea9f34fb24a8c",
 "assets/assets/images/background/genshin-impact-bg2.jpg": "7f809325cd3ef264045c275c45e71405",
+"assets/assets/images/background/vision.gif": "53a6ad978020524c5d0e16f2645a8500",
 "assets/assets/images/characters/anemo/jean.webp": "5087551cc944616e6c1b9041e880a6d8",
 "assets/assets/images/characters/anemo/sucrose.webp": "d77d31d9314f460a928582846e7c1df4",
 "assets/assets/images/characters/anemo/venti.webp": "3f3f52d19ec1d4fcc7d81dd84d368d1a",
@@ -300,9 +302,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "3da4b6b20fb7d4b1c96860a6515e0f4e",
-"/": "3da4b6b20fb7d4b1c96860a6515e0f4e",
-"main.dart.js": "81cb096fcc0ba8f3e02e838dc545a29c",
+"index.html": "5c6801085e6f04f390c00405bf3530d9",
+"/": "5c6801085e6f04f390c00405bf3530d9",
+"main.dart.js": "c7f1fc4eb360f13d438bc1ebca9b0b62",
 "manifest.json": "d088e608a4d82e31d78f700c0628d746",
 "version.json": "36bb249bbf48d518cd389ac0ff287d35"
 };
