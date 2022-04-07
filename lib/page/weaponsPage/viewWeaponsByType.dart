@@ -6,6 +6,7 @@ import '../weaponInfoPage.dart';
 
 Widget viewWeaponsByType({required int index, required var context, required var type}) {
   var weaData = WeaponData.data;
+  weaData.sort((a, b) => b.rarity.compareTo(a.rarity));
   return Column(
     children: [
       for(int i = 0; i < index; i++)
@@ -25,7 +26,7 @@ Widget viewWeaponsByType({required int index, required var context, required var
                     ],
                   ),
                   SizedBox(width: 8.0,),
-                  Text('${weaData[i].name}', style: TextStyle(fontSize: 25.0, color: Colors.red),
+                  Text('${weaData[i].name}', style: TextStyle(fontSize: 20.0, color: Colors.white),
                   ),
                 ],
               ),
