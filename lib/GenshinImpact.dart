@@ -32,10 +32,10 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
     _tabControllerCharacters = TabController(length: 7, vsync: this);
     _tabControllerWeapons = TabController(length: 6, vsync: this);
     _mainTabController = TabController(length: 2, vsync: this);
-    _apiConnected();
+    _loadAPI();
   }
 
-  _apiConnected() async {
+  _loadAPI() async {
     setState(() {
       _isLoading = true;
     });
@@ -57,7 +57,7 @@ class _GenshinImpactState extends State<GenshinImpact> with TickerProviderStateM
       WeaponData.data = weaData;
     });
 
-    print(weaData[0].type);
+    print('successful');
   }
 
   @override

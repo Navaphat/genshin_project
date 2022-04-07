@@ -6,6 +6,7 @@ import 'package:genshin_project/page/weaponsPage/manageRarityColors.dart';
 Widget viewAllWeapon({required int index}) {
   var weaData = WeaponData.data;
   return ListView.builder(
+    padding: EdgeInsets.symmetric(horizontal: 20.0),
       itemCount: index,
       itemBuilder: (context, index) {
         return Card(
@@ -13,7 +14,7 @@ Widget viewAllWeapon({required int index}) {
           child: InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => weaponInfoPage(index: index)));
-              print('assets/images/weapons/${weaData[index].type.toString().substring(5)}/${weaData[index].slug}.webp');
+              //print('assets/images/weapons/${weaData[index].type.toString().substring(5)}/${weaData[index].slug}.webp');
             },
             child: Row(
               children: [
