@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
-import 'package:genshin_project/page/weaponsPage/manageRarityStars.dart';
+import 'package:genshin_project/page/manage/manageRarityStars.dart';
 
 class weaponInfoPage extends StatefulWidget {
 

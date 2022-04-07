@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/characterData.dart';
 import 'package:genshin_project/page/characterInfoPage.dart';
-import 'package:genshin_project/page/charactersPage/manageVisionColors.dart';
+import 'package:genshin_project/page/manage/manageVisionColors.dart';
 
 Widget viewAllCharacter({required int index}) {
   var charData = CharacterData.data;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_project/data/weaponData.dart';
 import 'package:genshin_project/page/weaponInfoPage.dart';
-import 'package:genshin_project/page/weaponsPage/manageRarityColors.dart';
-import 'package:genshin_project/page/weaponsPage/manageRarityStars.dart';
+import 'package:genshin_project/page/manage/manageRarityColors.dart';
+import 'package:genshin_project/page/manage/manageRarityStars.dart';
 
 Widget viewAllWeapon({required int index}) {
   var weaData = WeaponData.data;
@@ -18,22 +18,15 @@ Widget viewAllWeapon({required int index}) {
               //print('assets/images/weapons/${weaData[index].type.toString().substring(5)}/${weaData[index].slug}.webp');
             },
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                Stack(
                   children: [
-                    Stack(
-                      children: [
-                        Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0, color: weaponsCheskRarity(rarity: weaData[index].rarity),),
-                        Image.asset('assets/images/weapons/${weaData[index].type.toString().substring(5).toLowerCase()}/${weaData[index].slug}.webp', height: 100.0,)
-                      ],
-                    ),
-                    SizedBox(width: 8.0,),
-                    Text('${weaData[index].name}', style: TextStyle(fontSize: 20.0, color: Colors.white),),
+                    Image.asset('assets/images/characters/fivestarBG.jpg', width: 100.0, color: weaponsCheskRarity(rarity: weaData[index].rarity),),
+                    Image.asset('assets/images/weapons/${weaData[index].type.toString().substring(5).toLowerCase()}/${weaData[index].slug}.webp', height: 100.0,)
                   ],
                 ),
-
-                Image.asset('assets/images/raritys/${manageRarityStars(rarity: weaData[index].rarity)}.webp', width: 100.0,),
+                SizedBox(width: 8.0,),
+                Text('${weaData[index].name}', style: TextStyle(fontSize: 20.0, color: Colors.white),),
               ],
             ),
           ),

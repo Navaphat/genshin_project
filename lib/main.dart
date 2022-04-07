@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:genshin_project/GenshinImpact.dart';
 import 'package:genshin_project/home/homePage.dart';
 import 'package:genshin_project/model/customScorllBehavior.dart';
 
