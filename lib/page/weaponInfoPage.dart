@@ -89,6 +89,7 @@ class _weaponInfoPageState extends State<weaponInfoPage> {
                                 child: Center(child: Text('Rarity', style: TextStyle(fontSize: 18.0),)),
                               )),
                               Card(child: Image.asset('assets/images/raritys/${manageRarityStars(rarity: weaData.rarity)}.webp',height: 32.0,)),
+                              //Text('assets/images/raritys/${manageRarityStars(rarity: weaData.rarity)}.webp')
                             ],
                           ),
 
