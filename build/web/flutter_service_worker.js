@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "dc33f19d503aca60dfb9d45fa5cf3603",
+  "assets/AssetManifest.json": "e714f370284885c2167bbcf3d221d8c0",
 "assets/assets/google_fonts/Karla.zip": "9de264460799580de6d5ea4fad5947bd",
 "assets/assets/images/background/genshin-impact-07.jpg": "909c0253eef16a7177488a61d2272784",
 "assets/assets/images/background/genshin-impact-bg.jpg": "ef05e63264be77d3e6aea9f34fb24a8c",
@@ -296,8 +296,10 @@ const RESOURCES = {
 "assets/assets/images/weapons/sword/travelers-handy-sword.webp": "dcc2322246595a5ff85602d725a509c8",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
-"assets/NOTICES": "6020c4890f0694729c4eda4a6e5b2347",
+"assets/NOTICES": "1e0814c1d5ea97c1166f216d8ab12f03",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/packages/flutter_inappwebview/t_rex_runner/t-rex.css": "5a8d0222407e388155d7d1395a75d5b9",
+"assets/packages/flutter_inappwebview/t_rex_runner/t-rex.html": "16911fcc170c8af1c5457940bd0bf055",
 "canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
 "canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
 "canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
@@ -307,9 +309,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "11bd82196c1e33cc60021db504b45ac3",
-"/": "11bd82196c1e33cc60021db504b45ac3",
-"main.dart.js": "056cacd2fc3d2252d67259764c6bc3c5",
+"index.html": "7c868849b1c948a6922a5235f21a74d8",
+"/": "7c868849b1c948a6922a5235f21a74d8",
+"main.dart.js": "40f4388c788c8c9d69e6b2f6fb7308d9",
 "manifest.json": "d088e608a4d82e31d78f700c0628d746",
 "version.json": "116c1753fb98ef0d71f5af6545f041ae"
 };
