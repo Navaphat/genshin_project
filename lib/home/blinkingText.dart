@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BlinkingText extends StatefulWidget {
   final String _target;
@@ -24,7 +25,7 @@ class BlinkingTextState extends State<BlinkingText> {
   @override
   Widget build(BuildContext context) => Text(widget._target,
       style: _show
-          ? TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold, color: Colors.white)
+          ? GoogleFonts.prata(fontSize: 50.0, color: Colors.white, fontWeight: FontWeight.bold)
           : TextStyle(color: Colors.transparent));
 
   @override
@@ -33,3 +34,5 @@ class BlinkingTextState extends State<BlinkingText> {
     super.dispose();
   }
 }
+
+//GoogleFonts.abrilFatface(fontSize: 50.0, color: Colors.white)

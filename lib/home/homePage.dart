@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:genshin_project/GenshinImpact.dart';
 import 'package:genshin_project/home/blinkingText.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class homePage extends StatefulWidget {
   const homePage({Key? key}) : super(key: key);

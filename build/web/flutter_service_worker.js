@@ -3,7 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "ee616d592aeffd69802f52ffd1fe5460",
+  "assets/AssetManifest.json": "dc33f19d503aca60dfb9d45fa5cf3603",
+"assets/assets/google_fonts/Karla.zip": "9de264460799580de6d5ea4fad5947bd",
 "assets/assets/images/background/genshin-impact-07.jpg": "909c0253eef16a7177488a61d2272784",
 "assets/assets/images/background/genshin-impact-bg.jpg": "ef05e63264be77d3e6aea9f34fb24a8c",
 "assets/assets/images/background/genshin-impact-bg2.jpg": "7f809325cd3ef264045c275c45e71405",
@@ -294,19 +295,23 @@ const RESOURCES = {
 "assets/assets/images/weapons/sword/the-flute.webp": "fbe5f7c4d6ab075b37f24f63bb021279",
 "assets/assets/images/weapons/sword/travelers-handy-sword.webp": "dcc2322246595a5ff85602d725a509c8",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/NOTICES": "4e8d6a0148d3363fba819040431411a9",
+"assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
+"assets/NOTICES": "6020c4890f0694729c4eda4a6e5b2347",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "e8e42e0be50613e57bf697acae6d8e79",
-"/": "e8e42e0be50613e57bf697acae6d8e79",
-"main.dart.js": "e8a56434a86dc1598f65f3dca902f8b2",
+"index.html": "11bd82196c1e33cc60021db504b45ac3",
+"/": "11bd82196c1e33cc60021db504b45ac3",
+"main.dart.js": "056cacd2fc3d2252d67259764c6bc3c5",
 "manifest.json": "d088e608a4d82e31d78f700c0628d746",
-"version.json": "36bb249bbf48d518cd389ac0ff287d35"
+"version.json": "116c1753fb98ef0d71f5af6545f041ae"
 };
 
 // The application shell files that are downloaded before a service worker can
